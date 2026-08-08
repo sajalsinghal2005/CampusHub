@@ -13,6 +13,9 @@ urlpatterns = [
     # Accounts APIs
     path("api/", include("accounts.urls")),
 
+     # Students APIs
+    path("api/", include("students.urls")),
+
     # JWT
     path("api/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
     path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),

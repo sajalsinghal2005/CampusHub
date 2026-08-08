@@ -18,8 +18,8 @@ class Student(models.Model):
     )
 
     phone = models.CharField(max_length=15, blank=True, null=True)
-    github = models.URLField(blank=True)
-    linkedin = models.URLField(blank=True)
+    github = models.URLField(blank=True,null=True)
+    linkedin = models.URLField(blank=True,null=True)
 
     resume = models.FileField(
         upload_to = "resumes/",
