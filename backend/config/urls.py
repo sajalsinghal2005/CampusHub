@@ -13,6 +13,9 @@ urlpatterns = [
     # Accounts APIs
     path("api/", include("accounts.urls")),
 
+    # Company API
+    path("api/" , include("companies.urls")),
+
      # Students APIs
     path("api/", include("students.urls")),
 
