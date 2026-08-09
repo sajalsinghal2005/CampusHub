@@ -20,3 +20,11 @@ class IsStudent(BasePermission):
             request.user.is_authenticated
             and request.user.role == "STUDENT"
         )
+
+class IsPlacementOrAdmin(BasePermission):
+
+    def has_permission(self,request,view):
+        return(
+            request.user.is_authenticated
+            and request.user.role in ["PLACEMENT","ADMIN"]
+        )
